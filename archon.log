@@ -1,0 +1,11 @@
+2019-10-29 22:20:46:792 - [info] - 27 - Archon - System log level set to info
+2019-10-29 22:20:46:792 - [info] - 27 - Archon - GraphMapRuntime running in PROC mode
+2019-10-29 22:20:46:792 - [info] - 27 - Archon - GraphMapRuntime NextAvailPort is 21240
+2019-10-29 22:20:46:792 - [info] - 27 - Archon - GraphMapRuntime BinDir is /app/engine
+2019-10-29 22:20:46:792 - [info] - 27 - Archon - GraphMapRuntime ConfigServerUrl is http://127.0.0.1:5000
+2019-10-29 22:20:46:792 - [info] - 27 - Archon - GraphMapRuntime PerfMarkerEnabled is false
+2019-10-29 22:20:46:792 - [info] - 27 - Archon - Initializing Prometheus Telemetry Provider with service ServerURL: http://localhost/:2222/archonTelemetry
+2019-10-29 22:20:46:792 - [info] - 27 - Archon - Starting socket server: 127.0.0.1:21232
+2019-10-29 22:20:46:792 - [info] - 27 - Archon - Server listening on 127.0.0.1:21232
+2019-10-29 22:20:46:792 - [info] - 27 - Archon - Archon server ready on 127.0.0.1:21232
+2019-10-29 22:20:46:792 - [info] - 27 - Archon - archon process started

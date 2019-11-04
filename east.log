@@ -1,0 +1,201 @@
+2019-10-30T17:43:53.521216712Z <6> 2019-10-30 17:43:53.520 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T17:48:53.519788904Z <6> 2019-10-30 17:48:53.519 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T17:53:53.516011965Z <6> 2019-10-30 17:53:53.515 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T17:58:53.518610615Z <6> 2019-10-30 17:58:53.518 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T18:03:53.521988942Z <6> 2019-10-30 18:03:53.521 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T18:08:53.202875552Z <6> 2019-10-30 18:08:53.202 +00:00 [INF] - Started task to cleanup processed and stale messages for endpoint iothub
+2019-10-30T18:08:53.203228253Z <6> 2019-10-30 18:08:53.202 +00:00 [INF] - Cleaned up 0 messages from queue for endpoint iothub and 0 messages from message store.
+2019-10-30T18:08:53.517366655Z <6> 2019-10-30 18:08:53.517 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T18:13:53.515857512Z <6> 2019-10-30 18:13:53.515 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T18:18:53.521341703Z <6> 2019-10-30 18:18:53.521 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T18:23:53.521018612Z <6> 2019-10-30 18:23:53.520 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T18:28:53.516884056Z <6> 2019-10-30 18:28:53.516 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T18:33:52.403823684Z <6> 2019-10-30 18:33:52.402 +00:00 [INF] - Starting compaction of stores
+2019-10-30T18:33:52.403846984Z <6> 2019-10-30 18:33:52.402 +00:00 [INF] - Starting compaction of store ProductInfo
+2019-10-30T18:33:52.403850984Z <6> 2019-10-30 18:33:52.403 +00:00 [INF] - Starting compaction of store iothub
+2019-10-30T18:33:52.403854284Z <6> 2019-10-30 18:33:52.403 +00:00 [INF] - Starting compaction of store twins
+2019-10-30T18:33:52.403857784Z <6> 2019-10-30 18:33:52.403 +00:00 [INF] - Starting compaction of store EdgeTwin
+2019-10-30T18:33:52.403862484Z <6> 2019-10-30 18:33:52.403 +00:00 [INF] - Starting compaction of store checkpoints
+2019-10-30T18:33:52.403867484Z <6> 2019-10-30 18:33:52.403 +00:00 [INF] - Starting compaction of store DeviceScopeCache
+2019-10-30T18:33:52.403872684Z <6> 2019-10-30 18:33:52.403 +00:00 [INF] - Starting compaction of store default
+2019-10-30T18:33:52.403877584Z <6> 2019-10-30 18:33:52.403 +00:00 [INF] - Starting compaction of store sessions
+2019-10-30T18:33:52.403907084Z <6> 2019-10-30 18:33:52.403 +00:00 [INF] - Starting compaction of store messages
+2019-10-30T18:33:53.518644053Z <6> 2019-10-30 18:33:53.518 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T18:34:06.093626952Z <6> 2019-10-30 18:34:06.093 +00:00 [INF] - Starting periodic operation Get EdgeHub config...
+2019-10-30T18:34:06.176845034Z <6> 2019-10-30 18:34:06.176 +00:00 [INF] - Obtained edge hub config from module twin
+2019-10-30T18:34:06.176868434Z <6> 2019-10-30 18:34:06.176 +00:00 [INF] - Successfully completed periodic operation Get EdgeHub config
+2019-10-30T18:34:06.353913832Z <6> 2019-10-30 18:34:06.353 +00:00 [INF] - Updated reported properties for iotedgevm-east/$edgeHub
+2019-10-30T18:35:59.286727725Z <6> 2019-10-30 18:35:59.286 +00:00 [INF] - Starting refresh of device scope identities cache
+2019-10-30T18:38:53.520683840Z <6> 2019-10-30 18:38:53.520 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T18:39:23.206706445Z <6> 2019-10-30 18:39:23.206 +00:00 [INF] - Started task to cleanup processed and stale messages for endpoint iothub
+2019-10-30T18:39:23.207272747Z <6> 2019-10-30 18:39:23.207 +00:00 [INF] - Cleaned up 0 messages from queue for endpoint iothub and 0 messages from message store.
+2019-10-30T18:43:53.518190798Z <6> 2019-10-30 18:43:53.517 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T18:48:53.518261663Z <6> 2019-10-30 18:48:53.517 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T18:53:53.518900659Z <6> 2019-10-30 18:53:53.518 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T18:58:53.520932652Z <6> 2019-10-30 18:58:53.520 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T19:03:53.521248568Z <6> 2019-10-30 19:03:53.520 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T19:08:53.515594991Z <6> 2019-10-30 19:08:53.515 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T19:09:53.208581194Z <6> 2019-10-30 19:09:53.208 +00:00 [INF] - Started task to cleanup processed and stale messages for endpoint iothub
+2019-10-30T19:09:53.208862095Z <6> 2019-10-30 19:09:53.208 +00:00 [INF] - Cleaned up 0 messages from queue for endpoint iothub and 0 messages from message store.
+2019-10-30T19:13:53.516516828Z <6> 2019-10-30 19:13:53.516 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T19:18:53.520659636Z <6> 2019-10-30 19:18:53.520 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T19:23:53.521774298Z <6> 2019-10-30 19:23:53.521 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T19:28:53.520077673Z <6> 2019-10-30 19:28:53.519 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T19:33:53.518527393Z <6> 2019-10-30 19:33:53.518 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T19:34:06.177627260Z <6> 2019-10-30 19:34:06.177 +00:00 [INF] - Starting periodic operation Get EdgeHub config...
+2019-10-30T19:34:06.260113821Z <6> 2019-10-30 19:34:06.259 +00:00 [INF] - Obtained edge hub config from module twin
+2019-10-30T19:34:06.260294921Z <6> 2019-10-30 19:34:06.260 +00:00 [INF] - Successfully completed periodic operation Get EdgeHub config
+2019-10-30T19:34:06.441893896Z <6> 2019-10-30 19:34:06.441 +00:00 [INF] - Updated reported properties for iotedgevm-east/$edgeHub
+2019-10-30T19:36:00.217423797Z <6> 2019-10-30 19:36:00.217 +00:00 [INF] - Starting refresh of device scope identities cache
+2019-10-30T19:38:53.516742243Z <6> 2019-10-30 19:38:53.516 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T19:40:23.211445128Z <6> 2019-10-30 19:40:23.210 +00:00 [INF] - Started task to cleanup processed and stale messages for endpoint iothub
+2019-10-30T19:40:23.211501128Z <6> 2019-10-30 19:40:23.211 +00:00 [INF] - Cleaned up 0 messages from queue for endpoint iothub and 0 messages from message store.
+2019-10-30T19:43:53.521013261Z <6> 2019-10-30 19:43:53.520 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T19:48:53.515107358Z <6> 2019-10-30 19:48:53.514 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T19:53:53.516797318Z <6> 2019-10-30 19:53:53.516 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T19:58:53.518487439Z <6> 2019-10-30 19:58:53.518 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T20:03:53.520851116Z <6> 2019-10-30 20:03:53.520 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T20:08:53.516180592Z <6> 2019-10-30 20:08:53.515 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T20:10:53.218742934Z <6> 2019-10-30 20:10:53.218 +00:00 [INF] - Started task to cleanup processed and stale messages for endpoint iothub
+2019-10-30T20:10:53.218894534Z <6> 2019-10-30 20:10:53.218 +00:00 [INF] - Cleaned up 0 messages from queue for endpoint iothub and 0 messages from message store.
+2019-10-30T20:12:48.657045109Z <6> 2019-10-30 20:12:48.656 +00:00 [INF] - Request starting HTTP/1.1 GET https://13.90.90.82/  
+2019-10-30T20:12:48.657094610Z <6> 2019-10-30 20:12:48.656 +00:00 [INF] - Request finished in 0.323ms 401 text/html
+2019-10-30T20:13:53.519526720Z <6> 2019-10-30 20:13:53.519 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T20:18:53.518714038Z <6> 2019-10-30 20:18:53.518 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T20:23:53.521737471Z <6> 2019-10-30 20:23:53.521 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T20:28:53.514807784Z <6> 2019-10-30 20:28:53.514 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T20:33:52.401440907Z <6> 2019-10-30 20:33:52.400 +00:00 [INF] - Starting compaction of stores
+2019-10-30T20:33:52.401525407Z <6> 2019-10-30 20:33:52.401 +00:00 [INF] - Starting compaction of store ProductInfo
+2019-10-30T20:33:52.401535307Z <6> 2019-10-30 20:33:52.401 +00:00 [INF] - Starting compaction of store iothub
+2019-10-30T20:33:52.401557807Z <6> 2019-10-30 20:33:52.401 +00:00 [INF] - Starting compaction of store twins
+2019-10-30T20:33:52.401566107Z <6> 2019-10-30 20:33:52.401 +00:00 [INF] - Starting compaction of store EdgeTwin
+2019-10-30T20:33:52.401691608Z <6> 2019-10-30 20:33:52.401 +00:00 [INF] - Starting compaction of store checkpoints
+2019-10-30T20:33:52.401704608Z <6> 2019-10-30 20:33:52.401 +00:00 [INF] - Starting compaction of store DeviceScopeCache
+2019-10-30T20:33:52.401711208Z <6> 2019-10-30 20:33:52.401 +00:00 [INF] - Starting compaction of store default
+2019-10-30T20:33:52.401928609Z <6> 2019-10-30 20:33:52.401 +00:00 [INF] - Starting compaction of store sessions
+2019-10-30T20:33:52.401943809Z <6> 2019-10-30 20:33:52.401 +00:00 [INF] - Starting compaction of store messages
+2019-10-30T20:33:53.517931191Z <6> 2019-10-30 20:33:53.517 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T20:34:06.257251360Z <6> 2019-10-30 20:34:06.256 +00:00 [INF] - Starting periodic operation Get EdgeHub config...
+2019-10-30T20:34:06.327088678Z <6> 2019-10-30 20:34:06.326 +00:00 [INF] - Obtained edge hub config from module twin
+2019-10-30T20:34:06.327108478Z <6> 2019-10-30 20:34:06.326 +00:00 [INF] - Successfully completed periodic operation Get EdgeHub config
+2019-10-30T20:34:06.511914755Z <6> 2019-10-30 20:34:06.511 +00:00 [INF] - Updated reported properties for iotedgevm-east/$edgeHub
+2019-10-30T20:36:01.144898970Z <6> 2019-10-30 20:36:01.144 +00:00 [INF] - Starting refresh of device scope identities cache
+2019-10-30T20:38:53.518995065Z <6> 2019-10-30 20:38:53.518 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T20:41:23.222594215Z <6> 2019-10-30 20:41:23.222 +00:00 [INF] - Started task to cleanup processed and stale messages for endpoint iothub
+2019-10-30T20:41:23.222814816Z <6> 2019-10-30 20:41:23.222 +00:00 [INF] - Cleaned up 0 messages from queue for endpoint iothub and 0 messages from message store.
+2019-10-30T20:43:53.520950684Z <6> 2019-10-30 20:43:53.520 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T20:48:53.520872369Z <6> 2019-10-30 20:48:53.520 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T20:53:53.519757218Z <6> 2019-10-30 20:53:53.518 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T20:58:53.519089707Z <6> 2019-10-30 20:58:53.518 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T21:03:53.518379653Z <6> 2019-10-30 21:03:53.518 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T21:08:53.521843223Z <6> 2019-10-30 21:08:53.521 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T21:11:53.224874137Z <6> 2019-10-30 21:11:53.224 +00:00 [INF] - Started task to cleanup processed and stale messages for endpoint iothub
+2019-10-30T21:11:53.224976337Z <6> 2019-10-30 21:11:53.224 +00:00 [INF] - Cleaned up 0 messages from queue for endpoint iothub and 0 messages from message store.
+2019-10-30T21:13:53.517411743Z <6> 2019-10-30 21:13:53.517 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T21:18:53.518563025Z <6> 2019-10-30 21:18:53.518 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T21:23:53.518758478Z <6> 2019-10-30 21:23:53.518 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T21:28:53.521707645Z <6> 2019-10-30 21:28:53.521 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T21:33:53.518666167Z <6> 2019-10-30 21:33:53.518 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T21:34:06.326695002Z <6> 2019-10-30 21:34:06.326 +00:00 [INF] - Starting periodic operation Get EdgeHub config...
+2019-10-30T21:34:06.396506721Z <6> 2019-10-30 21:34:06.396 +00:00 [INF] - Obtained edge hub config from module twin
+2019-10-30T21:34:06.396535121Z <6> 2019-10-30 21:34:06.396 +00:00 [INF] - Successfully completed periodic operation Get EdgeHub config
+2019-10-30T21:34:06.803802098Z <6> 2019-10-30 21:34:06.803 +00:00 [INF] - Updated reported properties for iotedgevm-east/$edgeHub
+2019-10-30T21:34:49.077261592Z <6> 2019-10-30 21:34:49.077 +00:00 [INF] - Obtained edge hub config patch update from module twin
+2019-10-30T21:34:49.078760597Z <6> 2019-10-30 21:34:49.077 +00:00 [INF] - Updating edge hub configuration
+2019-10-30T21:34:49.079031598Z <6> 2019-10-30 21:34:49.078 +00:00 [INF] - Set the following 1 route(s) in edge hub
+2019-10-30T21:34:49.079045298Z <6> 2019-10-30 21:34:49.078 +00:00 [INF] - route: FROM /messages/* INTO $upstream
+2019-10-30T21:34:49.079125498Z <6> 2019-10-30 21:34:49.079 +00:00 [INF] - Updated message store TTL to 7200 seconds
+2019-10-30T21:34:49.079136298Z <6> 2019-10-30 21:34:49.079 +00:00 [INF] - Updated the edge hub store and forward configuration
+2019-10-30T21:34:49.269510895Z <6> 2019-10-30 21:34:49.269 +00:00 [INF] - Updated reported properties for iotedgevm-east/$edgeHub
+2019-10-30T21:36:01.775573307Z <6> 2019-10-30 21:36:01.775 +00:00 [INF] - Starting refresh of device scope identities cache
+2019-10-30T21:38:53.518872454Z <6> 2019-10-30 21:38:53.518 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T21:41:18.883653059Z <6> 2019-10-30 21:41:18.882 +00:00 [INF] - Obtained edge hub config patch update from module twin
+2019-10-30T21:41:18.884364960Z <6> 2019-10-30 21:41:18.883 +00:00 [INF] - Updating edge hub configuration
+2019-10-30T21:41:18.885393762Z <6> 2019-10-30 21:41:18.885 +00:00 [INF] - Set the following 1 route(s) in edge hub
+2019-10-30T21:41:18.885416562Z <6> 2019-10-30 21:41:18.885 +00:00 [INF] - route: FROM /messages/* INTO $upstream
+2019-10-30T21:41:18.885425262Z <6> 2019-10-30 21:41:18.885 +00:00 [INF] - Updated message store TTL to 7200 seconds
+2019-10-30T21:41:18.885432662Z <6> 2019-10-30 21:41:18.885 +00:00 [INF] - Updated the edge hub store and forward configuration
+2019-10-30T21:41:19.170366537Z <6> 2019-10-30 21:41:19.170 +00:00 [INF] - Updated reported properties for iotedgevm-east/$edgeHub
+2019-10-30T21:42:23.226645301Z <6> 2019-10-30 21:42:23.226 +00:00 [INF] - Started task to cleanup processed and stale messages for endpoint iothub
+2019-10-30T21:42:23.226693901Z <6> 2019-10-30 21:42:23.226 +00:00 [INF] - Cleaned up 0 messages from queue for endpoint iothub and 0 messages from message store.
+2019-10-30T21:43:53.516858555Z <6> 2019-10-30 21:43:53.516 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T21:48:53.519499051Z <6> 2019-10-30 21:48:53.519 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T21:53:24.752962105Z <6> 2019-10-30 21:53:24.752 +00:00 [INF] - Obtained edge hub config patch update from module twin
+2019-10-30T21:53:24.754547709Z <6> 2019-10-30 21:53:24.754 +00:00 [INF] - Updating edge hub configuration
+2019-10-30T21:53:24.755729512Z <6> 2019-10-30 21:53:24.755 +00:00 [INF] - Set the following 1 route(s) in edge hub
+2019-10-30T21:53:24.755745112Z <6> 2019-10-30 21:53:24.755 +00:00 [INF] - route: FROM /messages/* INTO $upstream
+2019-10-30T21:53:24.755879513Z <6> 2019-10-30 21:53:24.755 +00:00 [INF] - Updated message store TTL to 7200 seconds
+2019-10-30T21:53:24.755896413Z <6> 2019-10-30 21:53:24.755 +00:00 [INF] - Updated the edge hub store and forward configuration
+2019-10-30T21:53:24.945245405Z <6> 2019-10-30 21:53:24.945 +00:00 [INF] - Updated reported properties for iotedgevm-east/$edgeHub
+2019-10-30T21:53:53.522136792Z <6> 2019-10-30 21:53:53.521 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T21:55:40.179223559Z <6> 2019-10-30 21:55:40.178 +00:00 [INF] - Obtained edge hub config patch update from module twin
+2019-10-30T21:55:40.181024764Z <6> 2019-10-30 21:55:40.180 +00:00 [INF] - Updating edge hub configuration
+2019-10-30T21:55:40.181052664Z <6> 2019-10-30 21:55:40.180 +00:00 [INF] - Set the following 1 route(s) in edge hub
+2019-10-30T21:55:40.181059764Z <6> 2019-10-30 21:55:40.180 +00:00 [INF] - route: FROM /messages/* INTO $upstream
+2019-10-30T21:55:40.181064364Z <6> 2019-10-30 21:55:40.180 +00:00 [INF] - Updated message store TTL to 7200 seconds
+2019-10-30T21:55:40.181068864Z <6> 2019-10-30 21:55:40.180 +00:00 [INF] - Updated the edge hub store and forward configuration
+2019-10-30T21:55:40.364118773Z <6> 2019-10-30 21:55:40.363 +00:00 [INF] - Updated reported properties for iotedgevm-east/$edgeHub
+2019-10-30T21:58:53.518164524Z <6> 2019-10-30 21:58:53.517 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T22:03:53.514934549Z <6> 2019-10-30 22:03:53.514 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T22:08:53.516713934Z <6> 2019-10-30 22:08:53.516 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T22:12:53.225487035Z <6> 2019-10-30 22:12:53.224 +00:00 [INF] - Started task to cleanup processed and stale messages for endpoint iothub
+2019-10-30T22:12:53.225634735Z <6> 2019-10-30 22:12:53.225 +00:00 [INF] - Cleaned up 0 messages from queue for endpoint iothub and 0 messages from message store.
+2019-10-30T22:13:53.519276427Z <6> 2019-10-30 22:13:53.518 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T22:18:53.522362272Z <6> 2019-10-30 22:18:53.522 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T22:23:53.521405463Z <6> 2019-10-30 22:23:53.520 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T22:28:53.515545243Z <6> 2019-10-30 22:28:53.515 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T22:33:52.401020167Z <6> 2019-10-30 22:33:52.400 +00:00 [INF] - Starting compaction of stores
+2019-10-30T22:33:52.401063867Z <6> 2019-10-30 22:33:52.400 +00:00 [INF] - Starting compaction of store ProductInfo
+2019-10-30T22:33:52.401133268Z <6> 2019-10-30 22:33:52.401 +00:00 [INF] - Starting compaction of store iothub
+2019-10-30T22:33:52.401175768Z <6> 2019-10-30 22:33:52.401 +00:00 [INF] - Starting compaction of store twins
+2019-10-30T22:33:52.401299468Z <6> 2019-10-30 22:33:52.401 +00:00 [INF] - Starting compaction of store EdgeTwin
+2019-10-30T22:33:52.401311068Z <6> 2019-10-30 22:33:52.401 +00:00 [INF] - Starting compaction of store checkpoints
+2019-10-30T22:33:52.401398068Z <6> 2019-10-30 22:33:52.401 +00:00 [INF] - Starting compaction of store DeviceScopeCache
+2019-10-30T22:33:52.401491369Z <6> 2019-10-30 22:33:52.401 +00:00 [INF] - Starting compaction of store default
+2019-10-30T22:33:52.401502869Z <6> 2019-10-30 22:33:52.401 +00:00 [INF] - Starting compaction of store sessions
+2019-10-30T22:33:52.401590669Z <6> 2019-10-30 22:33:52.401 +00:00 [INF] - Starting compaction of store messages
+2019-10-30T22:33:53.517346426Z <6> 2019-10-30 22:33:53.516 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T22:34:06.395317853Z <6> 2019-10-30 22:34:06.393 +00:00 [INF] - Starting periodic operation Get EdgeHub config...
+2019-10-30T22:34:06.464561861Z <6> 2019-10-30 22:34:06.463 +00:00 [INF] - Obtained edge hub config from module twin
+2019-10-30T22:34:06.464630161Z <6> 2019-10-30 22:34:06.464 +00:00 [INF] - Successfully completed periodic operation Get EdgeHub config
+2019-10-30T22:34:06.656437738Z <6> 2019-10-30 22:34:06.655 +00:00 [INF] - Updated reported properties for iotedgevm-east/$edgeHub
+2019-10-30T22:36:02.472529755Z <6> 2019-10-30 22:36:02.472 +00:00 [INF] - Starting refresh of device scope identities cache
+2019-10-30T22:37:52.213816219Z <6> 2019-10-30 22:37:52.213 +00:00 [INF] - HttpExtensionConnectionAdapter authentication timeout
+2019-10-30T22:38:53.518383700Z <6> 2019-10-30 22:38:53.518 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T22:43:23.231872362Z <6> 2019-10-30 22:43:23.231 +00:00 [INF] - Started task to cleanup processed and stale messages for endpoint iothub
+2019-10-30T22:43:23.231909662Z <6> 2019-10-30 22:43:23.231 +00:00 [INF] - Cleaned up 0 messages from queue for endpoint iothub and 0 messages from message store.
+2019-10-30T22:43:53.520996369Z <6> 2019-10-30 22:43:53.520 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T22:48:53.521377195Z <6> 2019-10-30 22:48:53.521 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T22:53:53.516947824Z <6> 2019-10-30 22:53:53.516 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T22:58:53.518330322Z <6> 2019-10-30 22:58:53.517 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T23:03:53.522913211Z <6> 2019-10-30 23:03:53.522 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T23:08:53.520932115Z <6> 2019-10-30 23:08:53.520 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T23:13:53.234040329Z <6> 2019-10-30 23:13:53.233 +00:00 [INF] - Started task to cleanup processed and stale messages for endpoint iothub
+2019-10-30T23:13:53.234169029Z <6> 2019-10-30 23:13:53.234 +00:00 [INF] - Cleaned up 0 messages from queue for endpoint iothub and 0 messages from message store.
+2019-10-30T23:13:53.518240141Z <6> 2019-10-30 23:13:53.517 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T23:18:53.519425518Z <6> 2019-10-30 23:18:53.519 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T23:23:53.516965584Z <6> 2019-10-30 23:23:53.516 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T23:24:10.898805294Z <6> 2019-10-30 23:24:10.898 +00:00 [INF] - Request starting HTTP/1.1 GET https://13.90.90.82/  
+2019-10-30T23:24:10.898859095Z <6> 2019-10-30 23:24:10.898 +00:00 [INF] - Request finished in 0.2822ms 401 text/html
+2019-10-30T23:28:53.521326736Z <6> 2019-10-30 23:28:53.520 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T23:33:53.521377469Z <6> 2019-10-30 23:33:53.521 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T23:34:06.467976104Z <6> 2019-10-30 23:34:06.467 +00:00 [INF] - Starting periodic operation Get EdgeHub config...
+2019-10-30T23:34:06.537464502Z <6> 2019-10-30 23:34:06.536 +00:00 [INF] - Obtained edge hub config from module twin
+2019-10-30T23:34:06.537490102Z <6> 2019-10-30 23:34:06.537 +00:00 [INF] - Successfully completed periodic operation Get EdgeHub config
+2019-10-30T23:34:06.721917730Z <6> 2019-10-30 23:34:06.721 +00:00 [INF] - Updated reported properties for iotedgevm-east/$edgeHub
+2019-10-30T23:36:03.394464581Z <6> 2019-10-30 23:36:03.394 +00:00 [INF] - Starting refresh of device scope identities cache
+2019-10-30T23:38:53.517081506Z <6> 2019-10-30 23:38:53.516 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T23:43:53.516582869Z <6> 2019-10-30 23:43:53.516 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T23:44:23.232697920Z <6> 2019-10-30 23:44:23.232 +00:00 [INF] - Started task to cleanup processed and stale messages for endpoint iothub
+2019-10-30T23:44:23.233841923Z <6> 2019-10-30 23:44:23.232 +00:00 [INF] - Cleaned up 0 messages from queue for endpoint iothub and 0 messages from message store.
+2019-10-30T23:48:53.516597347Z <6> 2019-10-30 23:48:53.516 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T23:53:53.517378059Z <6> 2019-10-30 23:53:53.517 +00:00 [INF] - Reauthenticating connected clients
+2019-10-30T23:58:53.521150285Z <6> 2019-10-30 23:58:53.520 +00:00 [INF] - Reauthenticating connected clients
+2019-10-31T00:01:07.253493190Z <6> 2019-10-31 00:01:07.253 +00:00 [INF] - Obtained edge hub config patch update from module twin
+2019-10-31T00:01:07.255091595Z <6> 2019-10-31 00:01:07.254 +00:00 [INF] - Updating edge hub configuration
+2019-10-31T00:01:07.255567096Z <6> 2019-10-31 00:01:07.255 +00:00 [INF] - Set the following 1 route(s) in edge hub
+2019-10-31T00:01:07.255631396Z <6> 2019-10-31 00:01:07.255 +00:00 [INF] - route: FROM /messages/* INTO $upstream
+2019-10-31T00:01:07.255638496Z <6> 2019-10-31 00:01:07.255 +00:00 [INF] - Updated message store TTL to 7200 seconds
+2019-10-31T00:01:07.255642696Z <6> 2019-10-31 00:01:07.255 +00:00 [INF] - Updated the edge hub store and forward configuration
+2019-10-31T00:01:07.434214807Z <6> 2019-10-31 00:01:07.433 +00:00 [INF] - Updated reported properties for iotedgevm-east/$edgeHub
+2019-10-31T00:03:53.517793737Z <6> 2019-10-31 00:03:53.517 +00:00 [INF] - Reauthenticating connected clients
