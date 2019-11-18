@@ -34,3 +34,5 @@
 2019-10-30T23:31:19.915213355Z    *** Updated by EX3 graph1.ex3_1, frame 2145
 2019-10-30T23:31:19.915221694Z    *** Updated by EX3 graph1.ex3_2, frame 2145
 2019-10-30T23:31:19.915229497Z    *** Updated by ex-python graph1.ex-python, frame 2145
+
+2019-10-30T23:31:19.915229497Z [31m2019-11-06 19:14:04:523 - [error] - 24 - Archon - Error: failed to process graph https://graphconfigstore.file.core.windows.net/graphsample/graph1settings.yaml?sv=2018-03-28&ss=bfqt&srt=sco&sp=rwdlacup&se=2019-10-12T00:10:27Z&st=2019-10-11T16:10:27Z&spr=https&sig=olwb1L1wDZz3JfKNh9lM1aZw9eLQcnDRfUKsEMCf%2Bh0%3D. yaml: line 3: mapping values are not allowed in this context
