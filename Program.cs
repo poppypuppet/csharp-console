@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
 using Microsoft.Azure.Devices.Client;
 using Newtonsoft.Json;
@@ -11,21 +9,18 @@ namespace console
 {
     class Program
     {
-
         // dd/MMM/yyyy:HH:mm:ss zzz
         // 2019-10-30T23:31:19.915433969Z 2019-10-30 23:31:19:915 - [verbose] - 6484 ArchonAG-graph1.ex1_a  - SingleEdgeIoGatherer::handleIncomingMessage  [handleIncomingMessage()][/go/src/RaaS.PerceptionEngine.Core/libArchon/archonag/./inputGatherer/singleEdgeIoGatherer.h:25] 
         // 2019-10-30T23:31:19.915433969Z 2019-10-30 23:31:19:915 [verbose] 6484 <ArchonAG-graph1.ex1_a> SingleEdgeIoGatherer::handleIncomingMessage  [handleIncomingMessage()][/go/src/RaaS.PerceptionEngine.Core/libArchon/archonag/./inputGatherer/singleEdgeIoGatherer.h:25] 
         // ^(\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.\d+Z) (\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}:\d{3}) - [(\a+)] - (\d+) .+
         public static Regex regex2 = new Regex(@"(?<UTC>\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.\d+Z)(?<DATA>.+)");
         public static Regex regex = new Regex(@"(?<UTC>\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.\d+Z) (?<LocalTime>\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}:\d{3}) - \[(?<LOGLEVEL>\w+)\] - (?<PID>\d+) (?<CLASS>.+) - (?<DATA>.+)");
-
         public static char[] charsToTrim = { ' ', '\n', '\r' };
 
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
             string cs = "HostName=RTVIoTHuB.azure-devices.net;DeviceId=iotedgevm-east;SharedAccessKey=kd8fV/TQ2HaAyq6ZTfZNO47bejaWqE+cypgugjuS28k=";
-
             var csb = IotHubConnectionStringBuilder.Create(cs);
             Console.WriteLine(csb.DeviceId);
             Console.WriteLine(csb.GatewayHostName);
@@ -41,9 +36,8 @@ namespace console
             DateTimeOffset dtf = DateTimeOffset.FromUnixTimeSeconds(1572917090);
             Console.WriteLine(dtf.UtcDateTime);
             Console.WriteLine(DateTime.Parse("2019-10-30T23:31:19.915433969Z"));
-
-
         }
+
 
         public static void logs()
         {
