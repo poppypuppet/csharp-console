@@ -36,8 +36,29 @@ namespace console
             DateTimeOffset dtf = DateTimeOffset.FromUnixTimeSeconds(1572917090);
             Console.WriteLine(dtf.UtcDateTime);
             Console.WriteLine(DateTime.Parse("2019-10-30T23:31:19.915433969Z"));
+
+            Enume();
         }
 
+
+        public static void Enume()
+        {
+            List<int> payloads = new List<int>();
+            for (int i = 0; i < 100; i++)
+            {
+                payloads.Add(i);
+            }
+            
+            IEnumerable<IEnumerable<int>> batches = payloads.Batch(10);
+            foreach (var batch in batches)
+            {
+                foreach (var e in batch)
+                {
+                    Console.Write(e);
+                }
+                Console.WriteLine();
+            }
+        }
 
         public static void logs()
         {
@@ -48,6 +69,7 @@ namespace console
             var logsObj = new List<Dictionary<string, string>>();
             LogsMeta logsMeta = null;
             (logsMeta, logsObj) = PharseStream(meta);
+            Console.WriteLine(JsonConvert.SerializeObject(logsMeta));
             Console.WriteLine(JsonConvert.SerializeObject(logsObj));
             Console.WriteLine(logsObj.Count);
 
@@ -87,7 +109,7 @@ namespace console
         public static (LogsMeta, List<Dictionary<String, String>>) PharseStream(Dictionary<String, String> meta)
         {
             //string archon = @"archon.log";
-            string node = "node.log";
+            string node = "color.log";
             //string replacement = Regex.Replace(s, @"\t|\n|\r", "");
             int lineCounter = 0;
             int matchCounter = 0;
@@ -100,16 +122,21 @@ namespace console
                 {
                     var dic = new Dictionary<String, String>();
                     var maches = regex.Matches(line);
-                    if (regex.IsMatch(line))
+                    if (!maches.Any())
                     {
-                        // match full logs
-                        maches = regex.Matches(line);
-                    }
-                    else if (regex2.IsMatch(line))
-                    {
-                        // match logs only with timestamp
                         maches = regex2.Matches(line);
                     }
+                    // if (regex.IsMatch(line))
+                    // {
+                    //     // match full logs
+                    //     maches = regex.Matches(line);
+
+                    // }
+                    // else if (regex2.IsMatch(line))
+                    // {
+                    //     // match logs only with timestamp
+                    //     maches = regex2.Matches(line);
+                    // }
 
                     foreach (Match match in maches)
                     {
