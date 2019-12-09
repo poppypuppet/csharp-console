@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text.RegularExpressions;
 using Microsoft.Azure.Devices.Client;
+using Microsoft.Rest.Azure.Authentication;
 using Newtonsoft.Json;
 
 namespace console
@@ -33,13 +35,24 @@ namespace console
             Console.WriteLine(DateTime.Now.AddHours(-1).ToUniversalTime().ToString());
             Console.WriteLine(DateTimeOffset.Now);
 
+            // Gives 2009-06-11T16:11:10.5312500Z
+            DateTime.Now.ToUniversalTime().ToString("o");
+            // Gives 2009-06-11T17:11:10.5312500+0100
+            DateTime.Now.ToString("o");
+
             DateTimeOffset dtf = DateTimeOffset.FromUnixTimeSeconds(1572917090);
             Console.WriteLine(dtf.UtcDateTime);
             Console.WriteLine(DateTime.Parse("2019-10-30T23:31:19.915433969Z"));
 
+            foreach (PropertyDescriptor descriptor in TypeDescriptor.GetProperties(dtf))
+            {
+                string name = descriptor.Name;
+                object value = descriptor.GetValue(dtf);
+                Console.WriteLine("{0}={1}", name, value);
+            }
+
             Enume();
         }
-
 
         public static void Enume()
         {
@@ -48,10 +61,24 @@ namespace console
             {
                 payloads.Add(i);
             }
-            
+
             IEnumerable<IEnumerable<int>> batches = payloads.Batch(10);
             foreach (var batch in batches)
             {
+                foreach (var e in batch)
+                {
+                    Console.Write(e);
+                }
+                Console.WriteLine();
+            }
+
+            foreach (var batch in payloads.Batch(2))
+            {
+                foreach (var e in batch)
+                {
+                    Console.Write(e);
+                }
+                Console.WriteLine();
                 foreach (var e in batch)
                 {
                     Console.Write(e);
@@ -92,7 +119,6 @@ namespace console
             Dictionary<LogFlag, string> ans = flags.Where(f => requestPayloadAsJson.Filters.ContainsKey(f.Value))
             .ToDictionary(f => f, f => requestPayloadAsJson.Filters[f.Value]);
             Console.WriteLine(JsonConvert.SerializeObject(ans));
-
         }
 
         public static void ThrottlePost(List<Dictionary<String, String>> payloads, int throttle = 10)
