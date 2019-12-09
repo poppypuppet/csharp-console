@@ -32,12 +32,13 @@ namespace console
             Console.WriteLine(csb.SharedAccessKeyName);
             Console.WriteLine(csb.SharedAccessSignature);
 
+            // 12/9/2019 9:16:50 PM
             Console.WriteLine(DateTime.Now.AddHours(-1).ToUniversalTime().ToString());
+            // 12/9/2019 2:16:50 PM -08:00
             Console.WriteLine(DateTimeOffset.Now);
-
-            // Gives 2009-06-11T16:11:10.5312500Z
+            // 2009-06-11T16:11:10.5312500Z
             DateTime.Now.ToUniversalTime().ToString("o");
-            // Gives 2009-06-11T17:11:10.5312500+0100
+            // 2009-06-11T17:11:10.5312500+0100
             DateTime.Now.ToString("o");
 
             DateTimeOffset dtf = DateTimeOffset.FromUnixTimeSeconds(1572917090);
@@ -48,7 +49,7 @@ namespace console
             {
                 string name = descriptor.Name;
                 object value = descriptor.GetValue(dtf);
-                Console.WriteLine("{0}={1}", name, value);
+                Console.WriteLine("PropertyDescriptor {0}={1}", name, value);
             }
 
             Enume();
@@ -70,21 +71,7 @@ namespace console
                     Console.Write(e);
                 }
                 Console.WriteLine();
-            }
-
-            foreach (var batch in payloads.Batch(2))
-            {
-                foreach (var e in batch)
-                {
-                    Console.Write(e);
-                }
-                Console.WriteLine();
-                foreach (var e in batch)
-                {
-                    Console.Write(e);
-                }
-                Console.WriteLine();
-            }
+            }          
         }
 
         public static void logs()
