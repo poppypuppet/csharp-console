@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 using Microsoft.Azure.Devices.Client;
-using Microsoft.Rest.Azure.Authentication;
 using Newtonsoft.Json;
 
-namespace console
+
+namespace PEngineModule.Logs
 {
     class Program
     {
@@ -19,7 +20,7 @@ namespace console
         public static Regex regex = new Regex(@"(?<UTC>\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.\d+Z) (?<LocalTime>\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}:\d{3}) - \[(?<LOGLEVEL>\w+)\] - (?<PID>\d+) (?<CLASS>.+) - (?<DATA>.+)");
         public static char[] charsToTrim = { ' ', '\n', '\r' };
 
-        static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             Console.WriteLine("Hello World!");
             string cs = "HostName=RTVIoTHuB.azure-devices.net;DeviceId=iotedgevm-east;SharedAccessKey=kd8fV/TQ2HaAyq6ZTfZNO47bejaWqE+cypgugjuS28k=";
@@ -53,6 +54,7 @@ namespace console
             }
 
             Enume();
+            await AzureBlobStorage.Blob();
         }
 
         public static void Enume()
@@ -71,7 +73,7 @@ namespace console
                     Console.Write(e);
                 }
                 Console.WriteLine();
-            }          
+            }
         }
 
         public static void logs()

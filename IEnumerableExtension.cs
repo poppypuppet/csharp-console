@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace console
+namespace PEngineModule.Logs
 {
     public static class IEnumerableExtensions
     {
