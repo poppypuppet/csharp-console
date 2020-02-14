@@ -30,6 +30,7 @@ namespace PEngineModule.Logs
             byte[] requestBytes = Encoding.UTF8.GetBytes(LOG_REQUEST);
             socket.Send(requestBytes);
             byte[] recvBytes = new byte[socket.ReceiveBufferSize];
+            await socket.SendAsync(requestBytes, SocketFlags.None);
             int numBytes = socket.Receive(recvBytes, socket.ReceiveBufferSize, SocketFlags.None);
             socket.Disconnect(false);
             Console.WriteLine(Encoding.UTF8.GetString(recvBytes));
