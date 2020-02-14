@@ -1,0 +1,76 @@
+[
+    {
+        "Id": "acd30b303fa6c7b8ec47e06fc36479b1513eeb3a13f75295b85b399a4e435354",
+        "Names": [
+            "/admiring_payne"
+        ],
+        "Image": "perception-engine-build:dev",
+        "ImageID": "sha256:430fc2a0e0ba1e60646108a2b770ebdff4c5ddbb00a6c5ea1704e6dc77cc3a18",
+        "Command": "/bin/zsh",
+        "Created": 1581642112,
+        "Ports": [],
+        "Labels": {},
+        "State": "running",
+        "Status": "Up 2 minutes",
+        "HostConfig": {
+            "NetworkMode": "default"
+        },
+        "NetworkSettings": {
+            "Networks": {
+                "bridge": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "NetworkID": "e763e6a32f8c306e6b80eebbaf17f0b0db9efbd9b84a8a2df705b1e9ab8256fc",
+                    "EndpointID": "32ae2716d67bdd77a362cf9c800b868614318c6cc52d2a8fd7bd271502002ac6",
+                    "Gateway": "172.17.0.1",
+                    "IPAddress": "172.17.0.3",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "02:42:ac:11:00:03",
+                    "DriverOpts": null
+                }
+            }
+        },
+        "Mounts": []
+    },
+    {
+        "Id": "d1e5fd6cac0ecbf9dbac54c3ee1568c1be0e974b74003ac8831a4ff33dfb94a3",
+        "Names": [
+            "/inspiring_greider"
+        ],
+        "Image": "cdpxlinux.azurecr.io/user/rtvdev/perception-engine-build:latest",
+        "ImageID": "sha256:5d3db14d2e85da9ece13ae73746015b00b50b349b5f10ab804c6ce7990f31201",
+        "Command": "/bin/bash",
+        "Created": 1581642110,
+        "Ports": [],
+        "Labels": {},
+        "State": "running",
+        "Status": "Up 2 minutes",
+        "HostConfig": {
+            "NetworkMode": "default"
+        },
+        "NetworkSettings": {
+            "Networks": {
+                "bridge": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "NetworkID": "e763e6a32f8c306e6b80eebbaf17f0b0db9efbd9b84a8a2df705b1e9ab8256fc",
+                    "EndpointID": "4dab06d30921d934dbfe27115bb8657f6214ad478f8ed1a67b38e164b4be18ed",
+                    "Gateway": "172.17.0.1",
+                    "IPAddress": "172.17.0.2",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "02:42:ac:11:00:02",
+                    "DriverOpts": null
+                }
+            }
+        },
+        "Mounts": []
+    }
+]
