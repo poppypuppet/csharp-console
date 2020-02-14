@@ -25,7 +25,7 @@ namespace PEngineModule.Logs
             BlobServiceClient blobServiceClient = new BlobServiceClient(connectionString);
 
             //Create a unique name for the container
-            string containerName = "quickstartblobs" + Guid.NewGuid().ToString();
+            string containerName = "penginelogsblobs-" + Guid.NewGuid().ToString();
 
             // Create the container and return a container client object
             BlobContainerClient containerClient = await blobServiceClient.CreateBlobContainerAsync(containerName);
@@ -33,6 +33,7 @@ namespace PEngineModule.Logs
             string localPath = "./data/";
             string fileName = "quickstart-" + Guid.NewGuid().ToString() + ".txt";
             string localFilePath = Path.Combine(localPath, fileName);
+
 
             // Write text to the file
             await File.WriteAllTextAsync(localFilePath, "Hello, World!");
