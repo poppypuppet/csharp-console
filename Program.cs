@@ -56,6 +56,7 @@ namespace PEngineModule.Logs
             Enume();
             // await AzureBlobStorage.Blob();
             await DC.DockerQuery();
+            //AsynchronousClient.StartClient();
         }
 
         public static void Enume()
