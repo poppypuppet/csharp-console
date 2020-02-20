@@ -33,11 +33,11 @@ namespace PEngineModule.Logs
 
         public static void StartClient()
         {
-            const string LIST_REQUEST =
-               "GET /v1.40/containers/json HTTP/1.1\r\n" +
-               "Host: localhost\r\n" +
-               "Accept: */*\r\n" +
-               "\r\n";
+            // const string LIST_REQUEST =
+            // "GET /v1.40/containers/json HTTP/1.1\r\n" +
+            // "Host: localhost\r\n" +
+            // "Accept: */*\r\n" +
+            // "\r\n";
 
             const string LOG_REQUEST =
             "GET /v1.40/containers/5c797229cb21909ae02d3686988d0a0a0357cd20ca3d51dcd8225cfd4e474528/logs?timestamps=true&stdout=true&stderr=true HTTP/1.1\r\n" +
