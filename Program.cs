@@ -56,16 +56,12 @@ namespace PEngineModule.Logs
             }
 
             string containerid = "5fa17e4d8056e8d16a5a998318716a77becc01b36fde25b3de9fde98a64bf29b";
-            string fileName = string.Format("{0}/t{1}-t{2}-{3}.log",containerid.Substring(0, Math.Min(containerid.Length, 12)), timeFilter[0], timeFilter[1], DateTime.Now.ToString("o"));
+            string fileName = string.Format("{0}/t{1}-t{2}-{3}.log", containerid.Substring(0, Math.Min(containerid.Length, 12)), timeFilter[0], timeFilter[1], DateTime.Now.ToString("o"));
             Console.WriteLine(fileName);
+
+            Enume();
+            Logs();
             await AzureBlobStorage.Blob();
-            // using (var stream = await Matches())
-            // using (StreamReader reader = new StreamReader(stream))
-            // {
-            //     Console.WriteLine(reader.ReadToEnd());
-            // }
-            // Enume();
-            // await AzureBlobStorage.Blob();
             await DC.DockerQuery();
             //AsynchronousClient.StartClient();
         }
@@ -89,7 +85,7 @@ namespace PEngineModule.Logs
             }
         }
 
-        public static void logs()
+        public static void Logs()
         {
             var meta = new Dictionary<String, String>();
             meta.Add("ContainerId", "container.ID");
@@ -104,7 +100,7 @@ namespace PEngineModule.Logs
 
             ThrottlePost(logsObj);
 
-             
+
             // Dictionary<LogFlag, string> valueFilters = new Dictionary<LogFlag, string>();
             // valueFilters.Add(LogFlag.CLASS, "NODE_EX1");
             // var res = FilterStream(logsObj, timefilter, valueFilters);
