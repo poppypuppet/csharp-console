@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -19,6 +20,7 @@ namespace PEngineModule.Logs
         public static Regex regex2 = new Regex(@"(?<UTC>\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.\d+Z)(?<DATA>.+)");
         public static Regex regex = new Regex(@"(?<UTC>\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.\d+Z) (?<LocalTime>\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}:\d{3}) - \[(?<LOGLEVEL>\w+)\] - (?<PID>\d+) (?<CLASS>.+) - (?<DATA>.+)");
         public static char[] charsToTrim = { ' ', '\n', '\r' };
+        public static long[] timeFilter = { 1572478279916, 1572478279917 };
 
         public static async Task Main(string[] args)
         {
@@ -53,8 +55,17 @@ namespace PEngineModule.Logs
                 Console.WriteLine("PropertyDescriptor {0}={1}", name, value);
             }
 
-            Enume();
+            string containerid = "5fa17e4d8056e8d16a5a998318716a77becc01b36fde25b3de9fde98a64bf29b";
+            string fileName = string.Format("{0}/t{1}-t{2}-{3}.log",
+                            containerid.Substring(0, Math.Min(containerid.Length, 12)), timeFilter[0], timeFilter[1], DateTime.Now.ToString("o"));
+            Console.WriteLine(fileName);
+            //Enume();
             await AzureBlobStorage.Blob();
+            // using (var stream = await Matches())
+            // using (StreamReader reader = new StreamReader(stream))
+            // {
+            //     Console.WriteLine(reader.ReadToEnd());
+            // }
         }
 
         public static void Enume()
@@ -91,7 +102,7 @@ namespace PEngineModule.Logs
 
             ThrottlePost(logsObj);
 
-            // long[] timefilter = { 1572478279916, 1572478279917 };
+             
             // Dictionary<LogFlag, string> valueFilters = new Dictionary<LogFlag, string>();
             // valueFilters.Add(LogFlag.CLASS, "NODE_EX1");
             // var res = FilterStream(logsObj, timefilter, valueFilters);
@@ -121,6 +132,42 @@ namespace PEngineModule.Logs
             }
         }
 
+        public static async Task<Stream> Matches()
+        {
+            long[] timefilter = { 0, 1572478279917 };
+            MemoryStream stream = new MemoryStream();
+            StreamWriter writer = new StreamWriter(stream);
+            using (StreamReader sr = new StreamReader("color.log"))
+            {
+                string line = null;
+                while ((line = await sr.ReadLineAsync()) != null)
+                {
+                    long lineSize = System.Text.ASCIIEncoding.Unicode.GetByteCount(line);
+                    var match = regex2.Match(line);
+                    if (match.Success)
+                    {
+                        string Utc = match.Groups["UTC"].Value;
+                        long ts = UTCDateTimetoUTCTimestampInMiliSec(Utc);
+                        if (ts > timefilter[1])
+                        {
+                            break;
+                        }
+                        else if (ts > timefilter[0])
+                        {
+                            await writer.WriteLineAsync(line);
+                            await writer.FlushAsync();
+                        }
+                    }
+                }
+            }
+            stream.Position = 0;
+            return stream;
+        }
+        private static readonly DateTime UnixStartDayTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Utc);
+        private static long UTCDateTimetoUTCTimestampInMiliSec(String dt)
+        {
+            return (long)(DateTime.Parse(dt).ToUniversalTime() - UnixStartDayTime).TotalMilliseconds;
+        }
         public static (LogsMeta, List<Dictionary<String, String>>) PharseStream(Dictionary<String, String> meta)
         {
             //string archon = @"archon.log";
