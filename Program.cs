@@ -56,16 +56,18 @@ namespace PEngineModule.Logs
             }
 
             string containerid = "5fa17e4d8056e8d16a5a998318716a77becc01b36fde25b3de9fde98a64bf29b";
-            string fileName = string.Format("{0}/t{1}-t{2}-{3}.log",
-                            containerid.Substring(0, Math.Min(containerid.Length, 12)), timeFilter[0], timeFilter[1], DateTime.Now.ToString("o"));
+            string fileName = string.Format("{0}/t{1}-t{2}-{3}.log",containerid.Substring(0, Math.Min(containerid.Length, 12)), timeFilter[0], timeFilter[1], DateTime.Now.ToString("o"));
             Console.WriteLine(fileName);
-            //Enume();
             await AzureBlobStorage.Blob();
             // using (var stream = await Matches())
             // using (StreamReader reader = new StreamReader(stream))
             // {
             //     Console.WriteLine(reader.ReadToEnd());
             // }
+            // Enume();
+            // await AzureBlobStorage.Blob();
+            await DC.DockerQuery();
+            //AsynchronousClient.StartClient();
         }
 
         public static void Enume()
