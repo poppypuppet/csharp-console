@@ -27,11 +27,12 @@ namespace PEngineModule.Logs
             //Create a unique name for the container
             string containerName = "penginelogsblobs-" + Guid.NewGuid().ToString();
 
+            
             // Create the container and return a container client object
             BlobContainerClient containerClient = await blobServiceClient.CreateBlobContainerAsync(containerName);
             // Create a local file in the ./data/ directory for uploading and downloading
             string localPath = "./data/";
-            string fileName = "quickstart-" + Guid.NewGuid().ToString() + ".txt";
+            string fileName = "/quickstart-" + Guid.NewGuid().ToString() + ".txt";
             string localFilePath = Path.Combine(localPath, fileName);
 
 
