@@ -1,17 +1,17 @@
 [
     {
-        "Id": "acd30b303fa6c7b8ec47e06fc36479b1513eeb3a13f75295b85b399a4e435354",
+        "Id": "b29a269e87970ae64085c60a5ba54fdc990aaf0bc036e4e745e5c9d9ee942cf3",
         "Names": [
-            "/admiring_payne"
+            "/tender_mestorf"
         ],
         "Image": "perception-engine-build:dev",
         "ImageID": "sha256:430fc2a0e0ba1e60646108a2b770ebdff4c5ddbb00a6c5ea1704e6dc77cc3a18",
         "Command": "/bin/zsh",
-        "Created": 1581642112,
+        "Created": 1582652661,
         "Ports": [],
         "Labels": {},
         "State": "running",
-        "Status": "Up 2 minutes",
+        "Status": "Up 2 hours",
         "HostConfig": {
             "NetworkMode": "default"
         },
@@ -21,8 +21,8 @@
                     "IPAMConfig": null,
                     "Links": null,
                     "Aliases": null,
-                    "NetworkID": "e763e6a32f8c306e6b80eebbaf17f0b0db9efbd9b84a8a2df705b1e9ab8256fc",
-                    "EndpointID": "32ae2716d67bdd77a362cf9c800b868614318c6cc52d2a8fd7bd271502002ac6",
+                    "NetworkID": "c2cebfdacd90fdd0fe072a5f2ec1d40d8e7f7fa08484fce8c6c36219c2a85989",
+                    "EndpointID": "29f3b588011e031667cd427cb040d8a4199fb22b80cc65651cc875901585e7af",
                     "Gateway": "172.17.0.1",
                     "IPAddress": "172.17.0.3",
                     "IPPrefixLen": 16,
@@ -37,18 +37,18 @@
         "Mounts": []
     },
     {
-        "Id": "d1e5fd6cac0ecbf9dbac54c3ee1568c1be0e974b74003ac8831a4ff33dfb94a3",
+        "Id": "77b8fa0fa849ba43eea9442a3e589fc41bc9692f9066c28b86ba826e9dc5157c",
         "Names": [
-            "/inspiring_greider"
+            "/vigorous_rosalind"
         ],
-        "Image": "cdpxlinux.azurecr.io/user/rtvdev/perception-engine-build:latest",
-        "ImageID": "sha256:5d3db14d2e85da9ece13ae73746015b00b50b349b5f10ab804c6ce7990f31201",
-        "Command": "/bin/bash",
-        "Created": 1581642110,
+        "Image": "perception-engine-build:dev",
+        "ImageID": "sha256:430fc2a0e0ba1e60646108a2b770ebdff4c5ddbb00a6c5ea1704e6dc77cc3a18",
+        "Command": "/bin/zsh",
+        "Created": 1582652657,
         "Ports": [],
         "Labels": {},
         "State": "running",
-        "Status": "Up 2 minutes",
+        "Status": "Up 2 hours",
         "HostConfig": {
             "NetworkMode": "default"
         },
@@ -58,8 +58,8 @@
                     "IPAMConfig": null,
                     "Links": null,
                     "Aliases": null,
-                    "NetworkID": "e763e6a32f8c306e6b80eebbaf17f0b0db9efbd9b84a8a2df705b1e9ab8256fc",
-                    "EndpointID": "4dab06d30921d934dbfe27115bb8657f6214ad478f8ed1a67b38e164b4be18ed",
+                    "NetworkID": "c2cebfdacd90fdd0fe072a5f2ec1d40d8e7f7fa08484fce8c6c36219c2a85989",
+                    "EndpointID": "212f7551c28294c65d2a6ca54b4517d59518e1c47948be38a3a9ac151df76a2b",
                     "Gateway": "172.17.0.1",
                     "IPAddress": "172.17.0.2",
                     "IPPrefixLen": 16,
