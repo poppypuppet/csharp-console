@@ -59,10 +59,11 @@ namespace PEngineModule.Logs
             string fileName = string.Format("{0}/t{1}-t{2}-{3}.log", containerid.Substring(0, Math.Min(containerid.Length, 12)), timeFilter[0], timeFilter[1], DateTime.Now.ToString("o"));
             Console.WriteLine(fileName);
 
-            Enume();
-            Logs();
-            await AzureBlobStorage.Blob();
-            await DC.DockerQuery();
+            //Enume();
+            //Logs();
+            //await AzureBlobStorage.Blob();
+            await DockerClient.DockerQuery();
+            await DockerClient.ListContainer();
             //AsynchronousClient.StartClient();
         }
 
