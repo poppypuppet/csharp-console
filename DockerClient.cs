@@ -4,39 +4,14 @@ using System.ComponentModel;
 using System.IO;
 using System.Net.Http;
 using System.Net.Sockets;
-using System.Runtime.Serialization;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
-using Docker.DotNet.Models;
 using Microsoft.Net.Http.Client;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 
 namespace PEngineModule.Logs
 {
-    public class CLR
-    {
-        [DataMember(Name = "Id", EmitDefaultValue = false)]
-        public string ID { get; set; }
-
-        [DataMember(Name = "Names", EmitDefaultValue = false)]
-        public IList<string> Names { get; set; }
-
-        [DataMember(Name = "Image", EmitDefaultValue = false)]
-        public string Image { get; set; }
-
-        [DataMember(Name = "ImageID", EmitDefaultValue = false)]
-        public string ImageID { get; set; }
-
-        [DataMember(Name = "State", EmitDefaultValue = false)]
-        public string State { get; set; }
-
-        [DataMember(Name = "Status", EmitDefaultValue = false)]
-        public string Status { get; set; }
-    }
-
     public class DockerClient
     {
         public static async Task DockerQuery()
@@ -55,10 +30,6 @@ namespace PEngineModule.Logs
 
             byte[] requestBytes = Encoding.UTF8.GetBytes(LOG_REQUEST);
             await socket.SendAsync(requestBytes, SocketFlags.None);
-
-            // byte[] buffer = new byte[1024];
-            // int numBytes = await socket.ReceiveAsync(buffer, SocketFlags.None);
-            // Console.WriteLine($"recieve {Encoding.UTF8.GetString(buffer)}");
 
             byte[] endb = new byte[] { 3, 10 };
 
@@ -139,18 +110,22 @@ namespace PEngineModule.Logs
         public static async Task Client()
         {
             var handler = new ManagedHandler(async (string host, int port, CancellationToken cancellationToken) =>
-                        {
-                            var sock = new Socket(AddressFamily.Unix, SocketType.Stream, ProtocolType.Unspecified);
-                            await sock.ConnectAsync(new UnixDomainSocketEndPoint("/var/run/docker.sock"));
-                            return sock;
-                        });
+                {
+                    var sock = new Socket(AddressFamily.Unix, SocketType.Stream, ProtocolType.Unspecified);
+                    await sock.ConnectAsync(new UnixDomainSocketEndPoint("/var/run/docker.sock"));
+                    return sock;
+                });
             var client = new HttpClient(handler, true);
 
-            var response = await client.GetAsync("http://localhost/v1.40/containers/json");
+            var request = new HttpRequestMessage(HttpMethod.Get, "http://localhost/v1.40/containers/json");
+            request.Version = System.Version.Parse("1.1");
+            var response = await client.SendAsync(request);
+
+            //var response = await client.GetAsync("http://localhost/v1.40/containers/json");
             string list = await response.Content.ReadAsStringAsync();
             try
             {
-                IEnumerable<CLR> jsons = JsonConvert.DeserializeObject<IEnumerable<CLR>>(list);
+                IList<ContainerListResponse> jsons = JsonConvert.DeserializeObject<IList<ContainerListResponse>>(list);
                 foreach (var json in jsons)
                 {
                     foreach (PropertyDescriptor descriptor in TypeDescriptor.GetProperties(json))
@@ -166,8 +141,15 @@ namespace PEngineModule.Logs
                 Console.WriteLine(e);
             }
 
-            var logrequest = "http://localhost/v1.40/containers/e8ba2c4549b1b67877ffb20ba7c077d71de292cf14001941cfd62a05213d6a92/logs?timestamps=true&stdout=true&stderr=true&since=1&until=1582830200";
+            var logrequest = "http://localhost/v1.40/containers/eb1b8fff4431be0712185be2f1a3451946299018e1b160d35ab9d1db62140ecd/logs?timestamps=true&stdout=true&stderr=true&since=1&until=999999999999";
             Stream stream = await client.GetStreamAsync(logrequest);
+
+
+            request = new HttpRequestMessage(HttpMethod.Get, logrequest);
+            request.Version = System.Version.Parse("1.1");
+
+            response = await client.SendAsync(request);
+            stream = await response.Content.ReadAsStreamAsync();
 
             string line;
             using (StreamReader reader = new StreamReader(stream))

@@ -61,24 +61,6 @@ namespace PEngineModule.Logs
             string fileName = string.Format("{0}/t{1}-t{2}-{3}.log", containerid.Substring(0, Math.Min(containerid.Length, 12)), timeFilter[0], timeFilter[1], DateTime.Now.ToString("o"));
             Console.WriteLine(fileName);
 
-
-            string str = "[{\"Id\":\"77b8fa0fa849ba43eea9442a3e589fc41bc9692f9066c28b86ba826e9dc5157c\"},{\"Id\":\"77b8fa0fa849ba43eea9442a3e589fc41bc9692f9066c28b86ba826e9dc5157c\"}]";
-            var jsons = JsonConvert.DeserializeObject<IEnumerable<ContainerListResponse>>(str);
-            foreach (var json in jsons)
-            {
-                foreach (PropertyDescriptor descriptor in TypeDescriptor.GetProperties(json))
-                {
-                    string name = descriptor.Name;
-                    object value = descriptor.GetValue(json);
-                    Console.WriteLine("PropertyDescriptor {0}={1}", name, value);
-                }
-            }
-
-            string template = "http://localhost/v1.40/containers/{0}/logs?timestamps=true&stdout=true&stderr=true&since=1&until=1582830200";
-            Console.WriteLine(String.Format(template,"123"));
-
-
-
             //Enume();
             //Logs();
             //await AzureBlobStorage.Blob();

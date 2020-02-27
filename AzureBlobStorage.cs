@@ -27,7 +27,7 @@ namespace PEngineModule.Logs
             //Create a unique name for the container
             string containerName = "penginelogsblobs-" + Guid.NewGuid().ToString();
 
-            
+
             // Create the container and return a container client object
             BlobContainerClient containerClient = await blobServiceClient.CreateBlobContainerAsync(containerName);
             // Create a local file in the ./data/ directory for uploading and downloading
@@ -46,15 +46,16 @@ namespace PEngineModule.Logs
             Console.WriteLine("Uploading to Blob storage as blob:\n\t {0}\n", blobClient.Uri);
 
             // Open the file and upload its data
-            using FileStream uploadFileStream = File.OpenRead(localFilePath);
-            await blobClient.UploadAsync(uploadFileStream);
-            uploadFileStream.Close();
+            using (FileStream uploadFileStream = File.OpenRead(localFilePath))
+            {
+                await blobClient.UploadAsync(uploadFileStream);
+            }
 
 
             Console.WriteLine("Listing blobs...");
 
             // List all blobs in the container
-            await foreach (BlobItem blobItem in containerClient.GetBlobsAsync())
+            foreach (BlobItem blobItem in containerClient.GetBlobs())
             {
                 Console.WriteLine("\t" + blobItem.Name);
             }
@@ -69,9 +70,10 @@ namespace PEngineModule.Logs
             // Download the blob's contents and save it to a file
             BlobDownloadInfo download = await blobClient.DownloadAsync();
 
-            using FileStream downloadFileStream = File.OpenWrite(downloadFilePath);
-            await download.Content.CopyToAsync(downloadFileStream);
-            downloadFileStream.Close();
+            using (FileStream downloadFileStream = File.OpenWrite(downloadFilePath))
+            {
+                await download.Content.CopyToAsync(downloadFileStream);
+            }
 
             // Clean up
             Console.Write("Press any key to begin clean up");
