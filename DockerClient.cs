@@ -16,7 +16,6 @@ using Newtonsoft.Json.Linq;
 
 namespace PEngineModule.Logs
 {
-
     public class CLR
     {
         [DataMember(Name = "Id", EmitDefaultValue = false)]
@@ -149,10 +148,6 @@ namespace PEngineModule.Logs
 
             var response = await client.GetAsync("http://localhost/v1.40/containers/json");
             string list = await response.Content.ReadAsStringAsync();
-
-            string result = Regex.Replace(list, @"\r|\n", "");
-            Console.WriteLine(list);
-
             try
             {
                 IEnumerable<CLR> jsons = JsonConvert.DeserializeObject<IEnumerable<CLR>>(list);
@@ -171,7 +166,7 @@ namespace PEngineModule.Logs
                 Console.WriteLine(e);
             }
 
-            var logrequest = "http://localhost/v1.40/containers/5bb4c2a80aaa272ef32b1b5dd333f8827757727eb2d6adb70c9f6ef7883cfe50/logs?timestamps=true&stdout=true&stderr=true";
+            var logrequest = "http://localhost/v1.40/containers/e8ba2c4549b1b67877ffb20ba7c077d71de292cf14001941cfd62a05213d6a92/logs?timestamps=true&stdout=true&stderr=true&since=1&until=1582830200";
             Stream stream = await client.GetStreamAsync(logrequest);
 
             string line;
@@ -179,7 +174,7 @@ namespace PEngineModule.Logs
             {
                 while ((line = reader.ReadLine()) != null)
                 {
-                    Console.WriteLine(line); // Write to console.
+                    Console.WriteLine(line);
                 }
             }
         }

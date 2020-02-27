@@ -74,6 +74,9 @@ namespace PEngineModule.Logs
                 }
             }
 
+            string template = "http://localhost/v1.40/containers/{0}/logs?timestamps=true&stdout=true&stderr=true&since=1&until=1582830200";
+            Console.WriteLine(String.Format(template,"123"));
+
 
 
             //Enume();
